@@ -28,19 +28,6 @@ A **reducer** processes the action and updates the store. Think of it as a funct
 - **Reducers for component-based actions**: Actions and reducers are defined inside the same slice.
 - **Reducers for API-based actions**: We use **extraReducers** to handle asynchronous operations.
 
-## Steps to Set Up Redux Toolkit
-1. Install Redux Toolkit and React Redux:
-   ```bash
-   npm install @reduxjs/toolkit react-redux
-   ```
-2. Create a **store** folder inside `src/`.
-3. Create a `store.js` file inside the `store/` folder.
-4. Create a **slices** folder inside `store/` for different features (e.g., `productsSlice.js`).
-5. Define a slice with `createSlice()`.
-6. Define API-based actions using `createAsyncThunk()`.
-7. Wrap the entire application with `Provider` and pass the store.
-8. Use **useSelector** to read data and **useDispatch** to update data.
-
 ## Explanation of Key Concepts
 ### **1. Store Provider**
 Redux Toolkit provides a **store provider** that wraps the entire React application. This ensures that any component in the app can access the store data without passing props manually.
@@ -72,11 +59,13 @@ A function used to create an asynchronous action for fetching data from an API. 
    - When the action is dispatched, the reducer updates the state in the store.
    - The UI automatically re-renders based on the updated state.
 
-## Contributing:
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. 
-
 ## Conclusion
 Redux Toolkit simplifies state management in React applications by providing a structured approach using slices, reducers, actions, and the store. By following the steps above, you can efficiently manage global state without the complexity of prop drilling.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes. 
+
+
 
 
 
